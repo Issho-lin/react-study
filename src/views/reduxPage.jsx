@@ -13,6 +13,20 @@ const ReduxPage = () => {
         <div>
             <button onClick={() => store.dispatch({ type: 'ADD' })}>ADD: { store.getState() }</button>
             <button onClick={() => store.dispatch({ type: 'MINUS' })}>MINUS: { store.getState() }</button>
+            <button
+                onClick={() => {
+                    store.dispatch((dispatch) => {
+                        setTimeout(() => {
+                            dispatch({ type: 'ADD' })
+                        }, 1000);
+                    })
+                    // setTimeout(() => {
+                    //     store.dispatch({ type: 'ADD' })
+                    // }, 1000);
+                }}
+            >
+                asyADD：{ store.getState() }
+            </button>
         </div>
     )
 }
