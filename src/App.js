@@ -1,10 +1,14 @@
 import FormPage from '@/views/formPage'
-// import './App.css'
+import ReduxPage from '@/views/reduxPage';
+import { BrowserRouter, Route } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <FormPage/>
+      <BrowserRouter>
+        <Route path="/form" component={FormPage}/>
+        <Route path="/redux" component={ReduxPage}/>
+      </BrowserRouter>
     </div>
   );
 }
