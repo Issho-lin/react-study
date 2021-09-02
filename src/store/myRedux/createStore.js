@@ -16,6 +16,9 @@ export default function createStore(reducer, enhancer) {
         },
         subscribe: (cb) => {
             callbacks.push(cb)
+            return () => {
+                callbacks = []
+            }
         }
     }
 }
