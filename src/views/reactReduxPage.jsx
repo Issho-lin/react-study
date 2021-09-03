@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from 'react'
+import { Button } from 'antd'
 // import { connect } from 'react-redux'
 // import { bindActionCreators } from 'redux'
-// import { connect } from '@/store/myReactRedux'
-// import { bindActionCreators } from '@/store/myRedux'
-import { connect } from '@/store/miniReactRedux'
-import { bindActionCreators } from '@/store/miniRedux'
+import { connect } from '@/store/myReactRedux'
+import { bindActionCreators } from '@/store/myRedux'
+// import { connect } from '@/store/miniReactRedux'
+// import { bindActionCreators } from '@/store/miniRedux'
 
 const ReactReduxPage = (props) => {
     const letterCase = useRef(1)
@@ -13,9 +14,9 @@ const ReactReduxPage = (props) => {
     }, [props])
     return (
         <div>
-            <button onClick={props.add}>ADD: { props.countReducer }</button>
-            <button onClick={props.minus}>MINUS: {props.countReducer }</button>
-            <button
+            <Button onClick={props.add}>ADD: { props.countReducer }</Button>
+            <Button onClick={props.minus}>MINUS: {props.countReducer }</Button>
+            <Button
                 onClick={() => {
                     props.dispatch((dispatch) => {
                         setTimeout(() => {
@@ -29,7 +30,7 @@ const ReactReduxPage = (props) => {
                 }}
             >
                 asyADD：{ props.caseReducer }
-            </button>
+            </Button>
         </div>
     )
 }
