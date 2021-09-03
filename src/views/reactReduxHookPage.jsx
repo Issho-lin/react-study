@@ -23,7 +23,8 @@ import React from 'react'
 // import { useSelector, useDispatch } from '@/store/miniReactRedux'
 import { useSelector, useDispatch } from '@/store/myReactRedux'
 
-const ReactReduxHookPage = () => {
+const ReactReduxHookPage = (props) => {
+    console.log(props);
     const store = useSelector((state) => state)
     const dispatch = useDispatch()
     return (
