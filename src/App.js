@@ -2,7 +2,8 @@ import FormPage from '@/views/formPage'
 import ReduxPage from '@/views/reduxPage';
 import ReactReduxPage from '@/views/reactReduxPage';
 import { BrowserRouter, Route } from 'react-router-dom'
-import { Provider } from './store/myReactRedux'
+// import { Provider } from './store/myReactRedux'
+import { Provider } from './store/miniReactRedux'
 import store from './store';
 
 function App() {

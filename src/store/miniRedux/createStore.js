@@ -3,7 +3,7 @@ export default function createStore(reducer, enhancer) {
         return enhancer(createStore)(reducer)
     }
     let state = reducer(undefined, { type: `${new Date().getTime()}` })
-    const listener = []
+    let listener = []
     return {
         getState: () => {
             return state
@@ -15,6 +15,9 @@ export default function createStore(reducer, enhancer) {
         },
         subscribe(cb) {
             listener.push(cb)
+            return () => {
+                listener = []
+            }
         }
     }
 }

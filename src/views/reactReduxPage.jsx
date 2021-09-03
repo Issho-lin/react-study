@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react'
 // import { connect } from 'react-redux'
 // import { bindActionCreators } from 'redux'
-import { connect } from '@/store/myReactRedux'
-import { bindActionCreators } from '@/store/myRedux'
+// import { connect } from '@/store/myReactRedux'
+// import { bindActionCreators } from '@/store/myRedux'
+import { connect } from '@/store/miniReactRedux'
+import { bindActionCreators } from '@/store/miniRedux'
 
 const ReactReduxPage = (props) => {
     const letterCase = useRef(1)
