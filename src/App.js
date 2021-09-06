@@ -2,7 +2,9 @@ import FormPage from '@/views/formPage'
 import ReduxPage from '@/views/reduxPage';
 import ReactReduxPage from '@/views/reactReduxPage';
 import ReactReduxHookPage from '@/views/reactReduxHookPage'
-import { BrowserRouter, Route, Link, Switch, Redirect } from 'react-router-dom'
+import Empty404 from '@/views/404'
+// import { BrowserRouter, Route, Link, Switch, Redirect } from 'react-router-dom'
+import { BrowserRouter, Route, Link, Switch, Redirect } from './components/myReactRouterDom'
 // import { Provider } from 'react-redux'
 import { Provider } from './store/myReactRedux'
 // import { Provider } from './store/miniReactRedux'
@@ -25,15 +27,15 @@ function App() {
             <Route path="/redux" component={ReduxPage}/>
             <Route path="/reactRedux" component={ReactReduxPage}/>
             <Route path="/reactReduxHook/:id" children={(props) => <ReactReduxHookPage {...props}/>}/>
-            <Route path="/routerRedirect" render={() => {
+            <Route path="/routerRedirect" render={props => {
               let a = Math.floor(Math.random() * 10) > 5
               if (a) {
                 return <Redirect to="/"/>
               }
-              return <ReactReduxPage/>
+              return <ReactReduxPage {...props}/>
             }}/>
             <Redirect from="/user" to="/redux"/>
-            <Route render={() => 404}/>
+            <Route render={() => <Empty404/>}/>
           </Switch>
         </BrowserRouter>
       </div>

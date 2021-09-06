@@ -28,7 +28,7 @@ const ReactReduxHookPage = (props) => {
     const store = useSelector((state) => state)
     const dispatch = useDispatch()
     return (
-        <button onClick={() =>dispatch({type: 'ADD'})}>HooksAdd: { store.countReducer }</button>
+        <button onClick={() =>dispatch({type: 'ADD'})}>HooksAdd: { store.countReducer } - { props.match?.params?.id }</button>
     )
 }
 export default ReactReduxHookPage
