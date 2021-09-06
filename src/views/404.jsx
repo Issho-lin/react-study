@@ -1,7 +1,7 @@
 import React from "react";
 // import { withRouter } from 'react-router-dom'
-import { withRouter } from '@/components/myReactRouterDom'
-
+// import { withRouter } from '@/components/myReactRouterDom'
+import { withRouter } from '@/components/miniReactRouterDom'
 @withRouter
 class _404 extends React.Component {
     constructor(props) {

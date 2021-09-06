@@ -4,7 +4,8 @@ import ReactReduxPage from '@/views/reactReduxPage';
 import ReactReduxHookPage from '@/views/reactReduxHookPage'
 import Empty404 from '@/views/404'
 // import { BrowserRouter, Route, Link, Switch, Redirect } from 'react-router-dom'
-import { BrowserRouter, Route, Link, Switch, Redirect } from './components/myReactRouterDom'
+// import { BrowserRouter, Route, Link, Switch, Redirect } from './components/myReactRouterDom'
+import { BrowserRouter, Route, Link, Switch, Redirect } from './components/miniReactRouterDom'
 // import { Provider } from 'react-redux'
 import { Provider } from './store/myReactRedux'
 // import { Provider } from './store/miniReactRedux'
@@ -20,7 +21,8 @@ function App() {
             <Link to="/redux"> ReduxPage </Link> | 
             <Link to="/reactRedux"> ReactReduxPage </Link> | 
             <Link to="/reactReduxHook/10086"> ReactReduxHookPage </Link> | 
-            <Link to="/routerRedirect"> RouterRedirect </Link>
+            <Link to="/routerRedirect"> RouterRedirect </Link> | 
+            <Link to="/user"> UserPage </Link>
           </div>
           <Switch>
             <Route path="/" exact component={FormPage}/>
