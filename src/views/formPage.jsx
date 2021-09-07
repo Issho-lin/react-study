@@ -47,9 +47,9 @@ class FormPage extends Component {
         this.form.setFieldsValue({
             username: 'lin'
         })
-        setTimeout(() => {
-            this.props.history.push('/redux')
-        }, 1000);
+        // setTimeout(() => {
+        //     this.props.history.push('/redux')
+        // }, 1000);
     }
     
     onFinish = (values) => {
